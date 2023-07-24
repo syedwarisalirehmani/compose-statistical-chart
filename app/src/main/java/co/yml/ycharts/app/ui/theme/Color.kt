@@ -25,8 +25,8 @@ class YChartsColors(
 
 fun lightColors(
     background: Color = Color.White,
-    primary: Color = Color.White,
-    text: Color = Color.White,
+    primary: Color = Color.Blue,
+    text: Color = Color.Blue,
     button: Color = DarkGrey
 ): YChartsColors = YChartsColors(
     background,
@@ -36,9 +36,9 @@ fun lightColors(
 )
 
 fun darkColors(
-    background: Color = DarkGrey,
-    primary: Color = DarkGrey,
-    text: Color = DarkGrey,
+    background: Color = Color.Blue,
+    primary: Color = Color.Blue,
+    text: Color = Color.Blue,
     button: Color = Color.White
 ): YChartsColors = YChartsColors(
     background,

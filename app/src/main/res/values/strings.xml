@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">YCharts</string>
+    <string name="charts">charts</string>
     <string name="title_activity_bar_chart">BarChartActivity</string>
     <string name="title_activity_line_chart">LineChartActivity</string>
     <string name="title_activity_wave_chart">WaveChartActivity</string>

@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.fontResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -53,15 +55,22 @@ class MainActivity : ComponentActivity() {
                     )
                     addActivityInOutAnim()
                 })
-
-                ChartButton(title = getString(R.string.title_wave_chart), onClick = {
-                    startActivity(
-                        Intent(
-                            this@MainActivity, WaveChartActivity::class.java
-                        )
-                    )
-                    addActivityInOutAnim()
-                })
+//                ChartButton(title = getString(R.string.bubble_chart), onClick = {
+//                    startActivity(
+//                        Intent(
+//                            this@MainActivity, BubbleChartActivity::class.java
+//                        )
+//                    )
+//                    addActivityInOutAnim()
+//                })
+//                ChartButton(title = getString(R.string.title_wave_chart), onClick = {
+//                    startActivity(
+//                        Intent(
+//                            this@MainActivity, WaveChartActivity::class.java
+//                        )
+//                    )
+//                    addActivityInOutAnim()
+//                })
 
                 ChartButton(title = getString(R.string.title_pie_chart), onClick = {
                     startActivity(
@@ -79,22 +88,15 @@ class MainActivity : ComponentActivity() {
                     )
                     addActivityInOutAnim()
                 })
-                ChartButton(title = getString(R.string.title_bar_with_line_chart), onClick = {
-                    startActivity(
-                        Intent(
-                            this@MainActivity, CombinedLineAndBarChartActivity::class.java
-                        )
-                    )
-                    addActivityInOutAnim()
-                })
-                ChartButton(title = getString(R.string.bubble_chart), onClick = {
-                    startActivity(
-                        Intent(
-                            this@MainActivity, BubbleChartActivity::class.java
-                        )
-                    )
-                    addActivityInOutAnim()
-                })
+//                ChartButton(title = getString(R.string.title_bar_with_line_chart), onClick = {
+//                    startActivity(
+//                        Intent(
+//                            this@MainActivity, CombinedLineAndBarChartActivity::class.java
+//                        )
+//                    )
+//                    addActivityInOutAnim()
+//                })
+
             }
         }
     }
@@ -110,12 +112,12 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun AppBar() {
     TopAppBar(modifier = Modifier.fillMaxWidth(),
-        backgroundColor = YChartsTheme.colors.button,
+        backgroundColor = Color.Blue,
         elevation = 6.dp,
         title = {
             Text(
-                text = stringResource(R.string.app_name),
-                color = YChartsTheme.colors.text,
+                text = stringResource(R.string.charts),
+                color = Color.White,
                 textAlign = TextAlign.Center,
                 style = YChartsTheme.typography.header
             )
@@ -132,12 +134,12 @@ private fun ChartButton(title: String, onClick: () -> Unit) {
                 .fillMaxWidth()
                 .height(50.dp),
             onClick = onClick,
-            colors = ButtonDefaults.buttonColors(backgroundColor = YChartsTheme.colors.button)
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.Blue)
         ) {
             Text(
                 text = title,
                 style = YChartsTheme.typography.button,
-                color = YChartsTheme.colors.text
+                color = Color.White
             )
         }
     }
